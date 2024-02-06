@@ -1,0 +1,41 @@
+{
+  "productName": "Electron_application",
+  "appId": "com.company",
+  "defaultArch": "x64",
+  "artifactName": "${productName}.${ext}",
+  "compression": "normal",
+  "extraResources": ['build_static_resources/**'],
+  "files": [
+    "resources",
+    "out",
+  ],
+  "win": {
+    "target": "nsis",
+    "icon": "resources/icon.ico",
+    "publisherName": "Company",
+    "verifyUpdateCodeSignature": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory": true,
+    "installerIcon": "resources/icon.ico",
+    "deleteAppDataOnUninstall": true,
+    "guid": "fef5d85d-ba7e-4fe7-8f53-dcb25eddb8b3"
+  },
+  "mac": {
+    "icon": "resources/icon.icns",
+    "darkModeSupport": true,
+    "type": "development",
+    "minimumSystemVersion": "10.4",
+    "gatekeeperAssess": false,
+    "target": ["mas"]
+  },
+  "linux": {
+    "icon": "resources/icon.png",
+    "target": ["deb", "rpm"],
+    "category": "Utility"
+  },
+  "mas": {},
+  "dmg": {}
+}
